@@ -8,21 +8,23 @@
     
     
     
-#2
-normLst = []
+# #2
+# normLst = []
 
-userInput = input("Enter value seperated by space: ")
-normLst = userInput.split()
-normLst.sort()
+# userInput = input("Enter value seperated by space: ")
+# normLst = userInput.split()
+# normLst.sort()
 
-noDup = [*set(normLst)]
+# noDup = [*set(normLst)]
     
-print(normLst)
-print(noDup)
+# print(normLst)
+# print(noDup)
 
 #3
-
 userInput = input("Enter the value: ")
 
-# if userInput > 3 or 5:
+userInput = int(userInput)
+
+if userInput > 3 and 5:
+    print("hi")
     
