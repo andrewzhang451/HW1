@@ -21,17 +21,41 @@
 # print(noDup)
 
 
-#3
-lst = []
-userInput = int(input("Enter the value: "))
+# #3
 
+# sum = 0
 
+# userInput = int(input("Enter the value: "))
+
+# for i in range (userInput):
+#     if i%3==0 or i%5==0:
+#         sum += i          
+# print(sum)
 
 #keep incrementing by 1
 
 #until multi < user input
 
-# if userInput >= 3 and 5:
+# if userInput is bigger than 3 or 5:
+
 #     print()
 
-    
+
+
+# #4
+# lst = []
+# wrdCount = 0
+
+# userInput = input("Type in your sentence(s): ")
+
+# lst = userInput.split()
+ 
+# wrdCount = len(lst)
+
+# print(lst)
+
+# print(wrdCount)
+
+
+
+#5
