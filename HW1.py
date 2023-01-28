@@ -20,11 +20,18 @@
 # print(normLst)
 # print(noDup)
 
+
 #3
-userInput = input("Enter the value: ")
+lst = []
+userInput = int(input("Enter the value: "))
 
-userInput = int(userInput)
 
-if userInput > 3 and 5:
-    print("hi")
+
+#keep incrementing by 1
+
+#until multi < user input
+
+# if userInput >= 3 and 5:
+#     print()
+
     
