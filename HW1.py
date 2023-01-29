@@ -1,40 +1,39 @@
 # #1
-# val = input("Enter the value: ")
+val = input("Enter the value: ")
 
-# if str(val)==str(val)[::-1]:
-#     print("true")
-# else:
-#     print("false")
+if str(val)==str(val)[::-1]:
+    print("true")
+else:
+    print("false")
     
     
     
 # #2
-# normLst = []
+normLst = []
 
-# userInput = input("Enter value seperated by space: ")
-# normLst = userInput.split()
-# normLst.sort()
+userInput = input("Enter value seperated by space: ")
+normLst = userInput.split()
+normLst.sort()
 
-# noDup = [*set(normLst)]
+noDup = [*set(normLst)]
     
-# print(normLst)
-# print(noDup)
+print(normLst)
+print(noDup)
 
 
 # #3
+sum = 0
 
-# sum = 0
+userInput = int(input("Enter the value: "))
 
-# userInput = int(input("Enter the value: "))
+for i in range (userInput):
+    if i%3==0 or i%5==0:
+        sum += i          
+print(sum)
 
-# for i in range (userInput):
-#     if i%3==0 or i%5==0:
-#         sum += i          
-# print(sum)
+# keep incrementing by 1
 
-#keep incrementing by 1
-
-#until multi < user input
+# until multi < user input
 
 # if userInput is bigger than 3 or 5:
 
@@ -43,53 +42,51 @@
 
 
 # #4
-# lst = []
-# wrdCount = 0
+lst = []
+wrdCount = 0
 
-# userInput = input("Type in your sentence(s): ")
+userInput = input("Type in your sentence(s): ")
 
-# lst = userInput.split()
+lst = userInput.split()
  
-# wrdCount = len(lst)
+wrdCount = len(lst)
 
-# print(lst)
+print(lst)
 
-# print(wrdCount)
+print(wrdCount)
 
 
 
 #5
 
-# def pyramid(x:str):
-#     st = ""
-#     n = (len(x) * 2) - 1
-#     for i in range(n):
-#         temp1 = x[0:i+1]
-#         temp2 = x[i:0:-1]
-#         temp = ".".join(temp2 + temp1)
-#         temp = temp.center(4*n-3, ".")
-#         st += temp
-#         if i != n-1:
-#             st += "\n"
-        
-#     return st
-# print(pyramid("WXYZ"))
+def gen_pattern(letter):
+    front = ""
+    behind = "" 
+    repeat = "" 
+    row = "" 
+    horizontal = len(letter) 
+    for char in letter[::-1]: 
+        temp = [front, char, behind] 
+        if char == letter[len(letter) - 1]: 
+            row = char 
+        else:
+            row = ".".join(temp) 
+        front = row[:int(len(row) / 2) + 1]
+        behind = front[::-1] 
+        row = row.center((horizontal * 2 + horizontal + 1), ".") 
+        repeat += row + "\n" 
 
-def pyramid(x:str):
-    st = ""
-    n = (len(x)*2)-1
-    for i in range(n):
-        temp1 = x[-i+1:0:-1]
+    repeat = repeat.rstrip("\n") 
+    lines = repeat.split("\n") 
+    for i in range((horizontal - 2), -1, -1): 
+        repeat = repeat + "\n" + lines[i].rstrip("\n") 
+    return repeat 
 
-    return st
-print(pyramid("WXYZ"))
 
-#@2:03:53 of video is where i talks about this
+print(gen_pattern("WXYZ")) #Test case
 
 # print(pyramid("@"))
 # print(pyramid("@%"))
 # print(pyramid("ABC"))
 # print(pyramid("####"))
 # print(pyramid("adcdefghijklmnop"))
-
-
