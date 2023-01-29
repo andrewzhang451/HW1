@@ -60,18 +60,27 @@
 
 #5
 
+# def pyramid(x:str):
+#     st = ""
+#     n = (len(x) * 2) - 1
+#     for i in range(n):
+#         temp1 = x[0:i+1]
+#         temp2 = x[i:0:-1]
+#         temp = ".".join(temp2 + temp1)
+#         temp = temp.center(4*n-3, ".")
+#         st += temp
+#         if i != n-1:
+#             st += "\n"
+        
+#     return st
+# print(pyramid("WXYZ"))
+
 def pyramid(x:str):
     st = ""
-    n = (len(x) * 2) - 1
+    n = (len(x)*2)-1
     for i in range(n):
-        temp1 = x[0:i+1]
-        temp2 = x[i:0:-1]
-        temp = ".".join(temp2 + temp1)
-        temp = temp.center(4*n-3, ".")
-        st += temp
-        if i != n-1:
-            st += "\n"
-        
+        temp1 = x[-i+1:0:-1]
+
     return st
 print(pyramid("WXYZ"))
 
