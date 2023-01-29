@@ -62,7 +62,7 @@
 
 def pyramid(x:str):
     st = ""
-    n = len(x)
+    n = (len(x) * 2) - 1
     for i in range(n):
         temp1 = x[0:i+1]
         temp2 = x[i:0:-1]
