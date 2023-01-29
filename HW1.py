@@ -59,3 +59,28 @@
 
 
 #5
+
+def pyramid(x:str):
+    st = ""
+    n = len(x)
+    for i in range(n):
+        temp1 = x[0:i+1]
+        temp2 = x[i:0:-1]
+        temp = ".".join(temp2 + temp1)
+        temp = temp.center(4*n-3, ".")
+        st += temp
+        if i != n-1:
+            st += "\n"
+        
+    return st
+print(pyramid("WXYZ"))
+
+#@2:03:53 of video is where i talks about this
+
+# print(pyramid("@"))
+# print(pyramid("@%"))
+# print(pyramid("ABC"))
+# print(pyramid("####"))
+# print(pyramid("adcdefghijklmnop"))
+
+
