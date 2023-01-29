@@ -58,7 +58,6 @@ print(wrdCount)
 
 
 #5
-
 def gen_pattern(letter):
     front = ""
     behind = "" 
