@@ -60,9 +60,13 @@ print(wrdCount)
 #5
 def gen_pattern(letter):
     front = ""
+    
     behind = "" 
+    
     repeat = "" 
+    
     row = "" 
+    
     horizontal = len(letter) 
     for char in letter[::-1]: 
         temp = [front, char, behind] 
@@ -76,14 +80,15 @@ def gen_pattern(letter):
         repeat += row + "\n" 
 
     repeat = repeat.rstrip("\n") 
+    
     lines = repeat.split("\n") 
+    
     for i in range((horizontal - 2), -1, -1): 
         repeat = repeat + "\n" + lines[i].rstrip("\n") 
     return repeat 
 
 
-print(gen_pattern("WXYZ")) #Test case
-
+print(gen_pattern("WXYZ"))
 # print(pyramid("@"))
 # print(pyramid("@%"))
 # print(pyramid("ABC"))
