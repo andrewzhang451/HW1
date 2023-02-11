@@ -82,10 +82,10 @@ def gen_pattern(letter):
     return repeat 
 
 
-print(gen_pattern("WXYZ")) #Test case
+# print(gen_pattern("WXYZ")) 
 
-# print(pyramid("@"))
-# print(pyramid("@%"))
-# print(pyramid("ABC"))
-# print(pyramid("####"))
-# print(pyramid("adcdefghijklmnop"))
+print(gen_pattern("@"))
+print(gen_pattern("@%"))
+print(gen_pattern("ABC"))
+print(gen_pattern("####"))
+print(gen_pattern("adcdefghijklmnop"))
